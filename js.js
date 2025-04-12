@@ -19,8 +19,8 @@ if (readline.keyInYN('Voce deseja comprar algum de nossos produtos?')) {
             console.log('Voce cancelou a compra ' + nome, '!');
             return;
         }
-        readline.keyInYN('Voce escolheu ' + produtos_escolhidos[escolha_final] + 'deseja continuar?');
-        console.log('Voce comprou ' + produtos_escolhidos[escolha_final + ' obrigado pela compra ' + nome + '!']);
+        readline.keyInYN('Voce escolheu ' + produtos_escolhidos[escolha_final] + ' deseja continuar?');
+        console.log('Voce comprou ' + produtos_escolhidos[escolha_final] + ' obrigado pela compra ' + nome + '!');
     }
 } else {
     console.log('Valor invalido. Fechando programa...')
