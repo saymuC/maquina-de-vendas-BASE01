@@ -19,14 +19,18 @@ if (readline.keyInYN('Voce deseja comprar algum de nossos produtos?')) {
             console.log('Voce cancelou a compra ' + nome, '!');
             return;
         }
-        readline.keyInYN('Voce escolheu ' + produtos_escolhidos[escolha_final] + ' deseja continuar?');
-        const quantidade = readline.questionInt('Voce deseja quantos?')
+        const continuar = readline.keyInYN('Voce escolheu ' + produtos_escolhidos[escolha_final] + ' deseja continuar?');
+        if (continuar === false) {
+            console.log('Reinicie o programa e escolha outro produto!');
+            return;
+        }
+        const quantidade = readline.questionInt('Voce deseja quantos?');
         if (quantidade <= 0) {
-            console.log('Voce inseriu um valor inválido. Saindo...')
+            console.log('Voce inseriu um valor inválido. Saindo...');
             return;
         }
         console.log('Voce comprou ' + quantidade + ' ' + produtos_escolhidos[escolha_final] + ' obrigado pela compra ' + nome + '!');
     }
 } else {
-    console.log('Valor invalido. Fechando programa...')
+    console.log('Compra cancelada e/ou valor inválido. Fechando programa...');
 }
