@@ -2,7 +2,8 @@ const readline = require('readline-sync');
 const produtos1 = ["Coca", "Fanta", "Pepsi", "Guarana"];
 const produtos2 = ["Militos", "Cheetos", "Doritos", "Fandangos"];
 const produtos3 = ["Barra de Chocolate", "Barra de proteina", "Barrinha de cereal", "Barrinha de Flocos"];
-const categoria = ["Refrigerante em lata", "Salgadinhos", "Barrinhas"];
+const produtos4 = ["Leite", "Achocolatado", "Agua com gas", "Suco de limao", "Energetico"]
+const categoria = ["Refrigerante em lata", "Salgadinhos", "Barrinhas", "Bebidas"];
 
 console.clear();
 
@@ -18,7 +19,7 @@ if (readline.keyInYN('Voce deseja comprar algum de nossos produtos?')) {
         console.log('Voce cancelou a compra ' + nome, '!');
     } else if (escolha >= 0) {
         console.clear();
-        const escolha1 = [produtos1, produtos2, produtos3];
+        const escolha1 = [produtos1, produtos2, produtos3, produtos4];
         const produtos_escolhidos = escolha1[escolha];
         const escolha_final = readline.keyInSelect(produtos_escolhidos, "Qual voce deseja comprar?");
         if (escolha_final === -1) {
