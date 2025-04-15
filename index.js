@@ -117,6 +117,9 @@ function Remover_tarefas() {
         if (tarefa_apagar !== -1) {
             limpar();
             tarefas.splice(tarefa_apagar, 1);
+            tarefas.forEach((tarefa, i) => {
+                tarefa.id = i + 1;
+            });            
             console.log('Tarefa apagada com sucesso!');
         } else {
             limpar();
